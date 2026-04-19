@@ -27,7 +27,7 @@ const StocksScreen = ({ stocks }: StocksScreenProps) => {
                         ]}
                     >
                         <Text style={styles.symbol}>{stock.symbol}</Text>
-                        <Text>Value: {stock.value}</Text>
+                        <Text>Value: {stock.value.toFixed(2)}</Text>
                         <Text>
                             Change: {stock.change >= 0 ? '+' : ''}
                             {stock.change}
@@ -52,14 +52,14 @@ const styles = StyleSheet.create({
         marginBottom: 12,
     },
     card: {
-        backgroundColor: 'white',
+        backgroundColor: '#dddeee',
         padding: 16,
         borderRadius: 10,
         marginBottom: 12,
     },
     topPerformer: {
         borderWidth: 2,
-        borderColor: '#22c55e',
+        borderColor: '#6effa3',
     },
     symbol: {
         fontSize: 18,

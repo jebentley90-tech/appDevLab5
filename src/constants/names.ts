@@ -9,7 +9,7 @@ export const FIRST_NAMES = [
     "Amilia",
     "Olivia",
     "Phillip",
-    "Luois",
+    "Louis",
     "Isabelle",
     "Isabella",
     "Ferb",

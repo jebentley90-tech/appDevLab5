@@ -8,7 +8,7 @@ import {
 import { Stock } from '../types';
 
 export const getRandomStockChange = (): number => {
-    return Math.floor(Math.random() * (STOCK_RANGE)) + STOCK_DELTA_MIN + (Math.floor(Math.random() * 100) / 100);
+    return Math.round(((Math.random() * (STOCK_RANGE)) + STOCK_DELTA_MIN) * 100) / 100;
 };
 
 export const updateStocks = (stocks: Stock[]): Stock[] => {

@@ -25,7 +25,7 @@ export default PageLayout;
 const styles = StyleSheet.create({
     safeArea: {
         flex: 1,
-        backgroundColor: '#f9fafb',
+        backgroundColor: '#8ab1d8',
     },
     content: {
         padding: 16,

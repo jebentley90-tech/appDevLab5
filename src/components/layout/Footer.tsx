@@ -16,11 +16,12 @@ const styles = StyleSheet.create({
     container: {
         padding: 14,
         borderTopWidth: 1,
-        borderTopColor: '#e5e7eb',
+        backgroundColor: '#0c1e41',
+        borderTopColor: '#455579',
         alignItems: 'center',
     },
     text: {
-        color: '#6b7280',
+        color: '#ffffff',
         fontSize: 12,
     },
 });

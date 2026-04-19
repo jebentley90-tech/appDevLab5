@@ -10,6 +10,7 @@ type NamesScreenProps = {
     setGeneratedNames: React.Dispatch<React.SetStateAction<string[]>>;
     history: GeneratedNameHistory[];
     setHistory: React.Dispatch<React.SetStateAction<GeneratedNameHistory[]>>;
+    setTotalNamesGenerated: React.Dispatch<React.SetStateAction<number>>;
 };
 
 const NamesScreen = ({
@@ -17,6 +18,7 @@ const NamesScreen = ({
     setGeneratedNames,
     history,
     setHistory,
+    setTotalNamesGenerated,
 }: NamesScreenProps) => {
     const [countInput, setCountInput] = useState('3');
     const handleGenerate = () => {
@@ -32,6 +34,8 @@ const NamesScreen = ({
         };
 
         setHistory((prev) => [newHistoryItem, ...prev]);
+
+        setTotalNamesGenerated((prev) => prev + newNames.length);
     };
 
     return (
@@ -64,7 +68,6 @@ const NamesScreen = ({
             </View>
 
             <View style={styles.card}>
-                <Text style={styles.card}>
                     <Text style={styles.subheading}>History</Text>
                     {history.length === 0 ? (
                         <Text>No history yet.</Text>
@@ -78,7 +81,6 @@ const NamesScreen = ({
                             </View>
                         ))
                     )}
-                </Text>
             </View>
         </View>
     );
@@ -93,7 +95,7 @@ const styles = StyleSheet.create({
         marginBottom: 12,
     },
     card: {
-        backgroundColor: 'white',
+        backgroundColor: '#dddeee',
         padding: 16,
         borderRadius: 10,
         marginBottom: 12,

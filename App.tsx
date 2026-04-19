@@ -19,6 +19,7 @@ export default function App() {
   const [pumps, setPumps] = useState<Pump[]>(initialPumps);
   const [generatedNames, setGeneratedNames] = useState<string[]>([]);
   const [nameHistory, setNameHistory] = useState<GeneratedNameHistory[]>([]);
+  const [totalNamesGenerated, setTotalNamesGenerated] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   
   const handleReset = () => {
@@ -27,6 +28,7 @@ export default function App() {
     setGeneratedNames([]);
     setNameHistory([]);
     setIsPaused(false);
+    setTotalNamesGenerated(0);
     setScreen(SCREENS.DASHBOARD);
   };
 
@@ -50,6 +52,7 @@ export default function App() {
             setGeneratedNames={setGeneratedNames}
             history={nameHistory}
             setHistory={setNameHistory}
+            setTotalNamesGenerated={setTotalNamesGenerated}
           />
         );
       
@@ -64,6 +67,7 @@ export default function App() {
             stocks={stocks}
             pumps={pumps}
             generatedNames={generatedNames}
+            totalNamesGenerated={totalNamesGenerated}
           />
         );
     }
